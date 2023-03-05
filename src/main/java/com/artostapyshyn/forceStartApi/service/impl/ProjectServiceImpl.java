@@ -36,4 +36,9 @@ public class ProjectServiceImpl implements ProjectService{
 		projectRepository.deleteById(id);
 	}
 
+	@Override
+	public List<Project> generateRandomProjects() {
+		return projectRepository.generateRandomProjects();
+	}
+
 }

@@ -12,5 +12,7 @@ public interface ProjectService {
 
 	List<Project> findAll();
 	
+	List<Project> generateRandomProjects();
+	
 	void deleteById(Long id);
 }

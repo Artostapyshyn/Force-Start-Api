@@ -53,7 +53,7 @@ public class User {
 	
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference
-    private Resume resume;
+    private Set<Resume> resumes;
 	
 	@OneToMany(mappedBy = "usr", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonManagedReference

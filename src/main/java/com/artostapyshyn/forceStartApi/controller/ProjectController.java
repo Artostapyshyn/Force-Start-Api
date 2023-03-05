@@ -40,6 +40,16 @@ public class ProjectController {
 		log.info("Listing all projects");
 		return response;
 	}
+	
+	@GetMapping("/random")
+	@ResponseStatus(value = HttpStatus.OK)
+	public List<Object> getRandomProjects() {
+		List<Object> response = new ArrayList<>();
+		response.add(projectService.generateRandomProjects());
+
+		log.info("Random projects");
+		return response;
+	}
 
 	@GetMapping("/find{id}")
 	@ResponseStatus(value = HttpStatus.OK)
